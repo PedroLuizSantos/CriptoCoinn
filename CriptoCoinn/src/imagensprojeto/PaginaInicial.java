@@ -24,7 +24,7 @@ public class PaginaInicial extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		String imageId = "C:/Users/Pedro/Desktop/logo.jpg";
+		String imageId = "C:/Users/Pedro/CriptoCoinn/CriptoCoinn/src/imagensprojeto/logo.jpg";
     	byte[] imageData = carregarImagem(imageId);
     	response.setContentType("image/jpeg");
     	response.getOutputStream().write(imageData);
