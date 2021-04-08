@@ -22,7 +22,7 @@
 
 	<nav class="navbar">
 		<a class="nav-link active" aria-current="page" href="http://localhost:8080/CriptoCoinn/front.jsp#">HOME</a> 
-		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/ada.jsp">ADA</a> 
+		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/Ada">ADA</a> 
 		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/bnb.jsp">BNB</a>
 		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/chz.jsp">CHZ</a> 
 		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/dot.jsp">DOT</a>
@@ -47,7 +47,7 @@
 		<h2>Ficha Técnica</h2>
 		<p>Nome: ${ada_name}</p>
 		<p>Simbolo: ${ada_symbol}</p>
-		<p>Valor(usd):$  ${ada_price}</p>
+		<p>Valor(usd): $ ${ada_price}</p>
 		<p>Mareket Cap: ${ada_marketcap}</p>
 		<p>Total Volume: ${ada_volume}</p>
 	</div>

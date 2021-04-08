@@ -20,7 +20,7 @@
 
 	<nav class="navbar">
 		<a class="nav-link active" aria-current="page" href="http://localhost:8080/CriptoCoinn/front.jsp#">HOME</a> 
-		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/ada.jsp">ADA</a> 
+		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/Ada">ADA</a> 
 		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/bnb.jsp">BNB</a>
 		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/chz.jsp">CHZ</a> 
 		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/dot.jsp">DOT</a>
