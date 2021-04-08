@@ -22,9 +22,9 @@ public class PaginaAda extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		String imageId = "C:/Users/Pedro/Desktop/cardano.jpg";
+		String imageId = "C:\\Users\\luizl\\Pictures\\erik.png";
     	byte[] imageData = carregarImagem(imageId);
-    	response.setContentType("image/jpeg");
+    	response.setContentType("image/png");
     	response.getOutputStream().write(imageData);
 
 	}
