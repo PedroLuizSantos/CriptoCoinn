@@ -31,4 +31,109 @@ public class coinGecko {
 		return result ;
 	}
 	
+	public String cardanoInfo() throws IOException {
+
+		String result;
+		
+		URL url = new URL("https://api.coingecko.com/api/v3/coins/cardano");
+		InputStream is = url.openStream();
+		try {
+		  /* Now read the retrieved document from the stream. */
+
+			Scanner s = new Scanner(is).useDelimiter("\\A");
+			result = s.hasNext() ? s.next() : "";
+			s.close();
+			
+		} finally {
+		  is.close();
+		}
+		
+		
+		return result ;
+	}
+	
+	public String binanceInfo() throws IOException {
+
+		String result;
+		
+		URL url = new URL("https://api.coingecko.com/api/v3/coins/binancecoin");
+		InputStream is = url.openStream();
+		try {
+		  /* Now read the retrieved document from the stream. */
+
+			Scanner s = new Scanner(is).useDelimiter("\\A");
+			result = s.hasNext() ? s.next() : "";
+			s.close();
+			
+		} finally {
+		  is.close();
+		}
+		
+		
+		return result ;
+	}
+	
+	public String chilizInfo() throws IOException {
+
+		String result;
+		
+		URL url = new URL("https://api.coingecko.com/api/v3/coins/chiliz");
+		InputStream is = url.openStream();
+		try {
+		  /* Now read the retrieved document from the stream. */
+
+			Scanner s = new Scanner(is).useDelimiter("\\A");
+			result = s.hasNext() ? s.next() : "";
+			s.close();
+			
+		} finally {
+		  is.close();
+		}
+		
+		
+		return result ;
+	}
+	
+	public String polkadotInfo() throws IOException {
+
+		String result;
+		
+		URL url = new URL("https://api.coingecko.com/api/v3/coins/polkadot");
+		InputStream is = url.openStream();
+		try {
+		  /* Now read the retrieved document from the stream. */
+
+			Scanner s = new Scanner(is).useDelimiter("\\A");
+			result = s.hasNext() ? s.next() : "";
+			s.close();
+			
+		} finally {
+		  is.close();
+		}
+		
+		
+		return result ;
+	}
+	
+	public String solanaInfo() throws IOException {
+
+		String result;
+		
+		URL url = new URL("https://api.coingecko.com/api/v3/coins/solana");
+		InputStream is = url.openStream();
+		try {
+		  /* Now read the retrieved document from the stream. */
+
+			Scanner s = new Scanner(is).useDelimiter("\\A");
+			result = s.hasNext() ? s.next() : "";
+			s.close();
+			
+		} finally {
+		  is.close();
+		}
+		
+		
+		return result ;
+	}
+	
 }

@@ -1,3 +1,4 @@
+<%@page import="api.*"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -42,6 +43,13 @@
 		<p>A Cardano (ADA) é uma plataforma criada em 2015 por Charles Hoskinson, co-fundador da Ethereum, e possui um projeto bastante ambicioso.</p>
 		<p>Sua intenção é unir as melhores características e funcionalidades de todas as mais de 2 mil criptomoedas existentes no mundo, resolvendo problemas e oferecendo novas soluções para as moedas digitais.</p>
 		<p>O projeto é definido como a terceira geração de criptomoedas. Neste raciocínio, o Bitcoin seria a primeira geração, o Ethereum a segunda, e a Cardano a terceira geração.</p>	
+		<br>
+		<h2>Ficha Técnica</h2>
+		<p>Nome: ${ada_name}</p>
+		<p>Simbolo: ${ada_symbol}</p>
+		<p>Valor(usd):$  ${ada_price}</p>
+		<p>Mareket Cap: ${ada_marketcap}</p>
+		<p>Total Volume: ${ada_volume}</p>
 	</div>
 	
 <style>
