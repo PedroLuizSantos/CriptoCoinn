@@ -18,6 +18,7 @@
 </head>
 <body style="background-color: gold;">
 
+
 	<nav class="navbar">
 		<a class="nav-link active" aria-current="page" href="http://localhost:8080/CriptoCoinn/front.jsp#">HOME</a> 
 		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/ada.jsp">ADA</a> 
@@ -41,6 +42,22 @@
 			<img class="logo" src="./PaginaInicial"/>
 		</div>
 		<br>
+	</div>
+	
+	<div>
+		
+	</div>
+	
+	<div class="row gx-5">
+		<form action="Mostrar" method="get">
+		
+		<div class="mb-3">
+		<label>Valor Um</label>
+		<input class="form-control" type="number" name="preco_Moeda">
+		</div>
+		<button class="btn btn-primary" type="submit" value="preco" name="mostrapreco">Ver Preço</button>
+		
+		</form>
 	</div>
 
 <style>
