@@ -16,6 +16,8 @@
 	rel="stylesheet"
 	integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
 	crossorigin="anonymous">
+	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>ADA</title>
 </head>
 <body style="background-color: #A9A9A9;">
@@ -83,6 +85,7 @@
 			com alto grau de tolerância a falhas.</p>
 
 		<br>
+	
 		<div class="row">
 			<div class="column">
 				<div id="atributos" class="card">
@@ -104,7 +107,8 @@
 
 			<div class="column">
 				<div id="atributos" class="card">
-					<h4>Market Cap:${ada_marketcap}</h4>
+					<h4>Market Cap:${ada_marketcap}
+					Chama os guri loco <div class="popup" onclick="myFunction()"> <i class="fa fa-info-circle" style="font-size:20px"></i> <span class="popuptext" id="myPopup">Informações!</span></div></h4>
 				</div>
 			</div>
 			<div class="column">
@@ -116,6 +120,15 @@
 		<br>
 	</div>
 	<br>
+<script>
+
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+
 </body>
 <footer>
 	<div class="footer">
@@ -124,6 +137,63 @@
 </footer>
 
 <style>
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
 /* Float columns side by side */
 .column {
 	float: left;
@@ -154,7 +224,7 @@
 	padding: 10px;
 	text-align: center;
 	font-family: consolas;
-	background-color: #A9A9A9;
+	background-color:  #363636;
 }
 
 div.sticky {
