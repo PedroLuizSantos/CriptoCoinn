@@ -10,6 +10,11 @@
 	integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
 	crossorigin="anonymous"></script>
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
@@ -22,7 +27,9 @@
 <title>ADA</title>
 </head>
 <body class="bg">
-	<nav class="navbar">
+
+<nav class="navbar">
+	   <!--  <img src="Logao.png" class="loginho"> -->
 		<a class="nav-link active" aria-current="page"href="http://localhost:8080/CriptoCoinn/front.jsp#">HOME</a>
 		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/Ada">ADA</a>
 		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/bnb.jsp">BNB</a>
@@ -30,7 +37,6 @@
 		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/dot.jsp">DOT</a>
 		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/sol.jsp">SOL</a>
 	</nav>
-
 	<br>
 
 	<div class="card">
@@ -41,31 +47,28 @@
 		<div class="row">
 			<div class="column">
 				<div id="atributos" class="card">
-					<h4>Nome: ${ada_name}</h4>
+					<h4>Nome:</h4>
+					<h5>${ada_name}</h5>
+				</div>
+			</div>
+			
+			<div class="column">
+				<div id="atributos" class="card">
+					<h4>Valor(usd):</h4>
+					<h5>$${ada_price}</h5>
 				</div>
 			</div>
 
 			<div class="column">
 				<div id="atributos" class="card">
-					<h4>Simbolo:${ada_symbol}</h4>
-				</div>
-			</div>
-
-			<div class="column">
-				<div id="atributos" class="card">
-					<h4>Valor(usd):$${ada_price}</h4>
-				</div>
-			</div>
-
-			<div class="column">
-				<div id="atributos" class="card">
-					<h4>Market Cap:${ada_marketcap}
-				 <div class="popup" onclick="myFunction()"> <i class="fa fa-info-circle" style="font-size:20px"></i> <span class="popuptext" id="myPopup">Informações!</span></div></h4>
+					<h4>Market Cap:<h4>
+					<h5>${ada_marketcap} <div class="popup" onclick="myFunction()"> <i class="fa fa-info-circle" style="font-size:20px"></i> <span class="popuptext" id="myPopup">Informações!</span></div></h5>
 				</div>
 			</div>
 			<div class="column">
 				<div id="atributos" class="card">
-					<h3>Total Volume:${ada_volume}</h3>
+					<h3>Total Volume:</h3>
+					<h5>${ada_volume}</h5>
 				</div>
 			</div>
 		</div>
@@ -132,8 +135,14 @@ function myFunction() {
 </footer>
 
 <style>
+/*
+.loginho{
+  width:200px;
+}*/
 
-
+p{
+  text-indent: 40px;
+}
 .cardano{
   display: block;
   margin-left: auto;
@@ -206,7 +215,7 @@ function myFunction() {
 /* Float columns side by side */
 .column {
 	float: left;
-	width: 20%;
+	width: 25%;
 	padding: 0 9px;
 }
 /* Remove extra left and right margins, due to padding*/
@@ -255,26 +264,32 @@ div.sticky {
 	text-align: center;
 	font-family: consolas;
 }
-
 .nav-link {
-	color: gold;
+	color: azure;	
 }
-
-.navbar {
-	width: 100%;
-	background-color: #4F4F4F;
+.container-fluid{
+	width: 50%;
 	color: gold;
 	text-align: center;
 }
-
+.navbar{
+	background-image: url("Logao.png");
+	width: 100%;
+	height: 160px;
+	font-family: consolas;
+	font-size: 30px;
+	color: WHITE;
+	text-align: center;
+}
 .footer {
-	position: fixed;
+	background-color:black;
 	left: 0;
 	bottom: 0;
 	width: 100%;
 	height: 25px;
-	background-color: #4F4F4F;
-	color: gold;
+	color: azure;
+	font-family: consolas;
+	font-size: 15px;
 	text-align: center;
 }
 </style>
