@@ -18,14 +18,13 @@
 	crossorigin="anonymous">
 	
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <title>ADA</title>
 </head>
-<body style="background-color: #A9A9A9;">
-
+<body class="bg">
 	<nav class="navbar">
-		<a class="nav-link active" aria-current="page"
-			href="http://localhost:8080/CriptoCoinn/front.jsp#">HOME</a> <a
-			class="nav-link" href="http://localhost:8080/CriptoCoinn/Ada">ADA</a>
+		<a class="nav-link active" aria-current="page"href="http://localhost:8080/CriptoCoinn/front.jsp#">HOME</a>
+		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/Ada">ADA</a>
 		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/bnb.jsp">BNB</a>
 		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/chz.jsp">CHZ</a>
 		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/dot.jsp">DOT</a>
@@ -35,9 +34,40 @@
 	<br>
 
 	<div class="card">
-		<div class="sticky">Cardano ADA</div>
-		<div class="foto">
-			<img class="cardana" src="./PaginaAda" />
+		<div class="sticky"><h3>Cardano ADA</h3></div>
+		<br>
+		<img class="cardano" src="cardano3.jpg">
+		<br>
+		<div class="row">
+			<div class="column">
+				<div id="atributos" class="card">
+					<h4>Nome: ${ada_name}</h4>
+				</div>
+			</div>
+
+			<div class="column">
+				<div id="atributos" class="card">
+					<h4>Simbolo:${ada_symbol}</h4>
+				</div>
+			</div>
+
+			<div class="column">
+				<div id="atributos" class="card">
+					<h4>Valor(usd):$${ada_price}</h4>
+				</div>
+			</div>
+
+			<div class="column">
+				<div id="atributos" class="card">
+					<h4>Market Cap:${ada_marketcap}
+				 <div class="popup" onclick="myFunction()"> <i class="fa fa-info-circle" style="font-size:20px"></i> <span class="popuptext" id="myPopup">Informações!</span></div></h4>
+				</div>
+			</div>
+			<div class="column">
+				<div id="atributos" class="card">
+					<h3>Total Volume:${ada_volume}</h3>
+				</div>
+			</div>
 		</div>
 		<br>
 		<h3>Introdução</h3>
@@ -75,7 +105,7 @@
 		<p>O moeda Ada opera em seu próprio blockchain chamado o Camada de
 			estabelecimento de Cardano (CSL). O CSL é uma camada de contabilidade
 			e suporta transações contábeis. Uma segunda camada chamada CCA
-			(Cardano Computation Layer - Camada de Computação Cardano) suportará
+			(Cardano Computation Layer - Camada de Computação Cardano) suportará  
 			contratos inteligentes e aplicativos descentralizados.</p>
 		<h3>Desenvolvimento</h3>
 		<p>Cardano foi lançado em 29 de setembro de 2017 na fase de
@@ -83,45 +113,9 @@
 			desenvolve sua moeda em torno de uma arquitetura inter-redes
 			recursivas (RINA). Cardano usa Haskell, uma linguagem de programação
 			com alto grau de tolerância a falhas.</p>
-
-		<br>
-	
-		<div class="row">
-			<div class="column">
-				<div id="atributos" class="card">
-					<h4>Nome: ${ada_name}</h4>
-				</div>
-			</div>
-
-			<div class="column">
-				<div id="atributos" class="card">
-					<h4>Simbolo:${ada_symbol}</h4>
-				</div>
-			</div>
-
-			<div class="column">
-				<div id="atributos" class="card">
-					<h4>Valor(usd):$${ada_price}</h4>
-				</div>
-			</div>
-
-			<div class="column">
-				<div id="atributos" class="card">
-					<h4>Market Cap:${ada_marketcap}
-					Chama os guri loco <div class="popup" onclick="myFunction()"> <i class="fa fa-info-circle" style="font-size:20px"></i> <span class="popuptext" id="myPopup">Informações!</span></div></h4>
-				</div>
-			</div>
-			<div class="column">
-				<div id="atributos" class="card">
-					<h3>Total Volume:${ada_volume}</h3>
-				</div>
-			</div>
-		</div>
-		<br>
 	</div>
 	<br>
 <script>
-
 // When the user clicks on div, open the popup
 function myFunction() {
   var popup = document.getElementById("myPopup");
@@ -130,13 +124,28 @@ function myFunction() {
 </script>
 
 </body>
+<br>
 <footer>
 	<div class="footer">
-		<p>&copyCOPYRIGHT</p>
+		<p>CriptoCoin 2020 &copy</p>
 	</div>
 </footer>
 
 <style>
+
+
+.cardano{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30%;
+  padding: 5px;
+  width: 250px;
+}
+
+.bg{
+    background-image: url("Fundo.png")
+}
 /* Popup container - can be anything you want */
 .popup {
   position: relative;
@@ -200,7 +209,7 @@ function myFunction() {
 	width: 20%;
 	padding: 0 9px;
 }
-/* Remove extra left and right margins, due to padding */
+/* Remove extra left and right margins, due to padding*/
 .row {
 	margin: 0 -5px;
 }
@@ -220,7 +229,6 @@ function myFunction() {
 }
 /* Style the counter cards */
 #atributos {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	padding: 10px;
 	text-align: center;
 	font-family: consolas;
@@ -228,19 +236,13 @@ function myFunction() {
 }
 
 div.sticky {
+	background-image: url("Fundo.png");
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
 	background-color: #363636;
 	padding: 50px;
 	font-size: 20px;
-}
-
-.cardana {
-	border-radius: 10px;
-	padding: 5px;
-	width: 250px;
-	position: right;
 }
 
 .card {
@@ -270,7 +272,7 @@ div.sticky {
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	height: 20px;
+	height: 25px;
 	background-color: #4F4F4F;
 	color: gold;
 	text-align: center;
