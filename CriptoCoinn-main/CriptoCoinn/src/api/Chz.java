@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Ada
  */
-@WebServlet("/ada")
-public class Ada extends HttpServlet {
+@WebServlet("/chz")
+public class Chz extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Ada() {
+    public Chz() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,13 +31,13 @@ public class Ada extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
     	
- 	   	request.setAttribute("ada_name", MyServletContextListener.Cardano.name);
- 	   	request.setAttribute("ada_price", MyServletContextListener.Cardano.market_data.current_price.usd);
- 	   	request.setAttribute("ada_marketcap", MyServletContextListener.Cardano.market_data.market_cap.usd);
- 	   	request.setAttribute("ada_volume", MyServletContextListener.Cardano.market_data.total_volume.usd);
+ 	   	request.setAttribute("chz_name", MyServletContextListener.Chiliz.name);
+ 	   	request.setAttribute("chz_price", MyServletContextListener.Chiliz.market_data.current_price.usd);
+ 	   	request.setAttribute("chz_marketcap", MyServletContextListener.Chiliz.market_data.market_cap.usd);
+ 	   	request.setAttribute("chz_volume", MyServletContextListener.Chiliz.market_data.total_volume.usd);
  	   	
  	   	System.out.print("Estou aqui");
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("ada.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("chz.jsp");
         requestDispatcher.forward(request, response);
 	}
 

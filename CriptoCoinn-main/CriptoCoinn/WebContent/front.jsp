@@ -16,45 +16,58 @@
 	integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
 	crossorigin="anonymous">
 </head>
-<body style="background-color: gold;">
+<body class="bg">
 
 	<nav class="navbar">
-		<a class="nav-link active" aria-current="page" href="http://localhost:8080/CriptoCoinn/front.jsp#">HOME</a> 
-		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/Ada">ADA</a> 
-		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/bnb.jsp">BNB</a>
-		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/chz.jsp">CHZ</a> 
-		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/dot.jsp">DOT</a>
-		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/sol.jsp">SOL</a>
+		<a class="nav-link active" aria-current="page"
+			href="http://localhost:8080/CriptoCoinn/front.jsp#">HOME</a> <a
+			class="nav-link" href="http://localhost:8080/CriptoCoinn/ada">ADA</a>
+		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/bnb">BNB</a>
+		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/chz">CHZ</a>
+		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/dot">DOT</a>
+		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/sol">SOL</a>
 	</nav>
+	<br>
 
-	<br>
-	<br>
-	<br>
-	<br>
-	
 	<div class="card">
 		<h3>Sobre o site</h3>
-		<p>Projeto referente a disciplina de Prática Profissional com Dados.</p>
-		<p>Usaremos a linguagem de programação Java para esta aplicação, pegaremos dados das cripto moedas e mostraremos os dados correspondentes e algumas de suas características.</p>
-
-		<div class="foto">
-			<img class="logo" src="./PaginaInicial"/>
-		</div>
-		<br>
+		<p>Projeto referente a disciplina de Prática Profissional com
+			Dados.</p>
+		<p>Usaremos a linguagem de programação Java para esta aplicação,
+			pegaremos dados das cripto moedas e mostraremos os dados
+			correspondentes e algumas de suas características.</p>
+		<h4>Membros do Grupo</h4>
+		<p>Bruno Biscaia --> Gabriel Brunatti --> Luiz Lucas --> Pedro Luiz</p>
 	</div>
+	<br>
 
-<style>
+	<footer>
+		<div class="footer">
+			<p>CriptoCoin 2020 &copy</p>
+		</div>
+	</footer>
 
-.logo{
-  border: 3px solid;
-  border-radius: 10px;
-  padding: 5px;
-  width: 300px;
-  position:right;
+
+	<style>
+.bg {
+	background-image: url("Fundo.png")
 }
+
+p {
+	text-indent: 40px;
+}
+
+.foto {
+	display: block;
+	opacity: 0.5;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+}
+
 .card {
-	background-color: black;
-	color:gold;
+	background-color: #696969;
+	color: gold;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	max-width: 90%;
 	height: 100%;
@@ -68,29 +81,26 @@
 }
 
 .navbar {
+	background-image: url("Fundo.png");
 	width: 100%;
-	position: fixed;
-	background-color: black;
-	color: gold;
+	font-family: consolas;
+	font-size: 30px;
+	color: WHITE;
 	text-align: center;
 }
 
 .footer {
+	background-image: url("Fundo.png");
 	position: fixed;
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	height: 20px;
-	background-color: black;
+	height: 25px;
 	color: gold;
+	font-family: consolas;
+	font-size: 15px;
 	text-align: center;
 }
 </style>
-
 </body>
-<footer>
-	<div class="footer">
-		<p>&copyCOPYRIGHT</p>
-	</div>
-</footer>
 </html>

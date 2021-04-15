@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Ada
  */
-@WebServlet("/ada")
-public class Ada extends HttpServlet {
+@WebServlet("/bnb")
+public class Bnb extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Ada() {
+    public Bnb() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,13 +31,13 @@ public class Ada extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
     	
- 	   	request.setAttribute("ada_name", MyServletContextListener.Cardano.name);
- 	   	request.setAttribute("ada_price", MyServletContextListener.Cardano.market_data.current_price.usd);
- 	   	request.setAttribute("ada_marketcap", MyServletContextListener.Cardano.market_data.market_cap.usd);
- 	   	request.setAttribute("ada_volume", MyServletContextListener.Cardano.market_data.total_volume.usd);
+ 	   	request.setAttribute("bnb_name", MyServletContextListener.Binance.name);
+ 	   	request.setAttribute("bnb_price", MyServletContextListener.Binance.market_data.current_price.usd);
+ 	   	request.setAttribute("bnb_marketcap", MyServletContextListener.Binance.market_data.market_cap.usd);
+ 	   	request.setAttribute("bnb_volume", MyServletContextListener.Binance.market_data.total_volume.usd);
  	   	
  	   	System.out.print("Estou aqui");
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("ada.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("bnb.jsp");
         requestDispatcher.forward(request, response);
 	}
 
@@ -50,5 +50,4 @@ public class Ada extends HttpServlet {
 	 
 	    }
 	}
-
 

@@ -10,11 +10,8 @@
 	integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
 	crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
@@ -29,20 +26,19 @@
 <body class="bg">
 
 <nav class="navbar">
-	   <!--  <img src="Logao.png" class="loginho"> -->
 		<a class="nav-link active" aria-current="page"href="http://localhost:8080/CriptoCoinn/front.jsp#">HOME</a>
-		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/Ada">ADA</a>
-		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/bnb.jsp">BNB</a>
-		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/chz.jsp">CHZ</a>
-		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/dot.jsp">DOT</a>
-		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/sol.jsp">SOL</a>
+		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/ada">ADA</a>
+		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/bnb">BNB</a>
+		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/chz">CHZ</a>
+		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/dot">DOT</a>
+		<a class="nav-link" href="http://localhost:8080/CriptoCoinn/sol">SOL</a>
 	</nav>
 	<br>
 
 	<div class="card">
 		<div class="sticky"><h3>Cardano ADA</h3></div>
 		<br>
-		<img class="cardano" src="cardano3.jpg">
+		<img class="cardano" src="ada.png">
 		<br>
 		<div class="row">
 			<div class="column">
@@ -79,17 +75,7 @@
 			ambicioso. Sua intenção é unir as melhores características e
 			funcionalidades de todas as mais de 2 mil criptomoedas existentes no
 			mundo, resolvendo problemas e oferecendo novas soluções para as
-			moedas digitais. O projeto é definido como a terceira geração de
-			criptomoedas. Neste raciocínio, o Bitcoin seria a primeira geração, o
-			Ethereum a segunda, e a Cardano a terceira geração. Um dos principais
-			objetivos da Cardano é, usando um blockchain, ser uma moeda digital,
-			assim como o Bitcoin. A ideia é servir como um meio de pagamento
-			alternativo em países que dificuldade de acesso a bancos. Para isso,
-			um de seus focos é melhorar a velocidade com que as transações são
-			feitas. Além disso, a Cardano foi a primeira criptomoeda baseada em
-			uma metodologia científica. Isso trás mais força para seu código, que
-			é avaliado e revisado por uma grande equipe de pesquisadores,
-			cientistas, engenheiros e desenvolvedores.</p>
+			moedas digitais.</p>
 		<h3>Objetivos</h3>
 		<p>Foi criado pela empresa de desenvolvimento de blockchain Input
 			Output Hong Kong (IOHK) e liderado por Charles Hoskinson,
@@ -97,19 +83,6 @@
 			objetivo executar contratos inteligentes, aplicativos
 			descentralizados, cadeias laterais, computação multipartidária, e
 			metadados.</p>
-		<h3>Plataforma</h3>
-		<p>As moedas são extraídas e as decisões são tomadas através de um
-			algoritmo de prova de participação chamado Ouroboros, em vez de um
-			sistema de prova de trabalho. O consenso é gerado pelo voto do
-			titular da moeda. Nesse protocolo, os líderes de slots geram novos
-			blocos no blockchain e verificam as transações. Qualquer pessoa
-			segurando uma moeda Ada pode se tornar um líder de slot.</p>
-		<h3>Camadas</h3>
-		<p>O moeda Ada opera em seu próprio blockchain chamado o Camada de
-			estabelecimento de Cardano (CSL). O CSL é uma camada de contabilidade
-			e suporta transações contábeis. Uma segunda camada chamada CCA
-			(Cardano Computation Layer - Camada de Computação Cardano) suportará  
-			contratos inteligentes e aplicativos descentralizados.</p>
 		<h3>Desenvolvimento</h3>
 		<p>Cardano foi lançado em 29 de setembro de 2017 na fase de
 			bootstrap 'Byron' com o lançamento oficial no Japão. Cardano
@@ -135,11 +108,6 @@ function myFunction() {
 </footer>
 
 <style>
-/*
-.loginho{
-  width:200px;
-}*/
-
 p{
   text-indent: 40px;
 }
@@ -149,7 +117,7 @@ p{
   margin-right: auto;
   border-radius: 30%;
   padding: 5px;
-  width: 250px;
+  width: 150px;
 }
 
 .bg{
@@ -246,8 +214,6 @@ p{
 
 div.sticky {
 	background-image: url("Fundo.png");
-	position: -webkit-sticky;
-	position: sticky;
 	top: 0;
 	background-color: #363636;
 	padding: 50px;
@@ -265,7 +231,7 @@ div.sticky {
 	font-family: consolas;
 }
 .nav-link {
-	color: azure;	
+	color: gold;	
 }
 .container-fluid{
 	width: 50%;
@@ -273,21 +239,20 @@ div.sticky {
 	text-align: center;
 }
 .navbar{
-	background-image: url("Logao.png");
+	background-image: url("Fundo.png");
 	width: 100%;
-	height: 160px;
 	font-family: consolas;
 	font-size: 30px;
 	color: WHITE;
 	text-align: center;
 }
 .footer {
-	background-color:black;
+	background-image: url("Fundo.png");
 	left: 0;
 	bottom: 0;
 	width: 100%;
 	height: 25px;
-	color: azure;
+	color: gold;
 	font-family: consolas;
 	font-size: 15px;
 	text-align: center;
