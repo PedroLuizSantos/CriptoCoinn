@@ -30,14 +30,17 @@
 	<br>
 
 	<div class="card">
-		<h3>Sobre o site</h3>
+		<h2>Sobre o site</h2>
 		<p>Projeto referente a disciplina de Prática Profissional com
 			Dados.</p>
 		<p>Usaremos a linguagem de programação Java para esta aplicação,
 			pegaremos dados das cripto moedas e mostraremos os dados
 			correspondentes e algumas de suas características.</p>
-		<h4>Membros do Grupo</h4>
-		<p>Bruno Biscaia --> Gabriel Brunatti --> Luiz Lucas --> Pedro Luiz</p>
+		<h2>Membros do Grupo</h2>
+  			<h4>Bruno Biscaia</h4>
+  			<h4>Gabriel Brunatti</h4>
+  			<h4>Luiz Lucas</h4>
+  			<h4>Pedro Luiz</h4>
 	</div>
 	<br>
 
@@ -49,6 +52,9 @@
 
 
 	<style>
+ul{
+width:100%;
+}
 .bg {
 	background-image: url("Fundo.png")
 }

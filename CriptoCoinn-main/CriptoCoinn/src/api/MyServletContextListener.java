@@ -29,6 +29,7 @@ public class MyServletContextListener implements ServletContextListener {
 	   moeda = gson.fromJson(coinGecko.bitcoinInfo(), Coin.class); 
 	   moeda.ConverterMarket_Data();
 	   moeda.transferirMarket_Data();
+	   
 
 	   Cardano = gson.fromJson(coinGecko.cardanoInfo(), Coin.class); 
 	   Cardano.ConverterMarket_Data();
