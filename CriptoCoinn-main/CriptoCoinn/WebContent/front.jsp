@@ -15,6 +15,7 @@
 	rel="stylesheet"
 	integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
 	crossorigin="anonymous">
+	
 </head>
 <body class="bg">
 
@@ -30,17 +31,22 @@
 	<br>
 
 	<div class="card">
-		<h2>Sobre o site</h2>
-		<p>Projeto referente a disciplina de Prática Profissional com
-			Dados.</p>
-		<p>Usaremos a linguagem de programação Java para esta aplicação,
+	<div class="sticky">
+			<h3>Sobre o Site</h3>
+		</div>
+		<br>
+		<h5>Projeto referente a disciplina de Prática Profissional com
+			Dados.</h5>
+		<h5>Usaremos a linguagem de programação Java para esta aplicação,
 			pegaremos dados das cripto moedas e mostraremos os dados
-			correspondentes e algumas de suas características.</p>
-		<h2>Membros do Grupo</h2>
-  			<h4>Bruno Biscaia</h4>
-  			<h4>Gabriel Brunatti</h4>
-  			<h4>Luiz Lucas</h4>
-  			<h4>Pedro Luiz</h4>
+			correspondentes e algumas de suas características.</h5>
+			<br>
+			
+		<h4>Membros do Grupo</h4>
+  			<h5>Bruno Biscaia</h5>
+  			<h5>Gabriel Brunatti</h5>
+  			<h5>Luiz Lucas</h5>
+  			<h5>Pedro Luiz</h5>
 	</div>
 	<br>
 
@@ -52,8 +58,13 @@
 
 
 	<style>
-ul{
-width:100%;
+
+div.sticky {
+	background-image: url("Fundo.png");
+	top: 0;
+	background-color: #363636;
+	padding: 50px;
+	font-size: 20px;
 }
 .bg {
 	background-image: url("Fundo.png")
@@ -88,6 +99,7 @@ p {
 
 .navbar {
 	background-image: url("Fundo.png");
+	background-repeat: no-repeat;
 	width: 100%;
 	font-family: consolas;
 	font-size: 30px;

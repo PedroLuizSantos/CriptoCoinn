@@ -62,7 +62,7 @@
 				<div id="atributos" class="card">
 					<h4>Market Cap:</h4>
 					
-					<h5 onkeypress="$(this).mask('00.000.000/0000-00')">${ada_marketcap}</h5><div class="popup" onclick="myFunction()"> <i class="fa fa-info-circle" style="font-size: 20px"></i> <span class="popuptext" id="myPopup"> Market Cap permite que os investidores entendam o valor relativo de uma criptomoeda em relação às outras.</span>
+					<h5 onkeypress="$(this).mask('00.000.000')">${ada_marketcap}</h5><div class="popup" onclick="myFunction()"> <i class="fa fa-info-circle" style="font-size: 20px"></i> <span class="popuptext" id="myPopup"> Market Cap permite que os investidores entendam o valor relativo de uma criptomoeda em relação às outras.</span>
 					</div>
 						
 				</div>
