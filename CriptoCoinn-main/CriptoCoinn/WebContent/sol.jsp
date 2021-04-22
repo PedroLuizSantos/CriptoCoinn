@@ -60,21 +60,18 @@
 
 			<div class="column">
 				<div id="atributos" class="card">
-					<h4>
-						Market Cap:
-						<h4>
-							<h5>${sol_marketcap}
-								<div class="popup" onclick="myFunction()">
-									<i class="fa fa-info-circle" style="font-size: 20px"></i> <span
-										class="popuptext" id="myPopup">Informações!</span>
-								</div>
-							</h5>
+					<h4>Market Cap:</h4>
+					<h5 class="myDIV">${sol_marketcap}</h5>
+					<div class="popup" onclick="myFunction()">
+					<i class="fa fa-info-circle" style="font-size: 20px"></i> 
+					<span class="popuptext" id="myPopup">Informações!</span>
+					</div>
 				</div>
 			</div>
 			<div class="column">
 				<div id="atributos" class="card">
 					<h3>Total Volume:</h3>
-					<h5>${sol_volume}</h5>
+					<h5 class="myDIV">${sol_volume}</h5>
 				</div>
 			</div>
 		</div>
@@ -108,6 +105,14 @@
 			var popup = document.getElementById("myPopup");
 			popup.classList.toggle("show");
 		}
+		
+		let x = document.querySelectorAll(".myDIV");
+        for (let i = 0, len = x.length; i < len; i++) {
+            let num = Number(x[i].innerHTML).toLocaleString('en');
+            x[i].innerHTML = num;
+            x[i].classList.add("currSign");
+        }
+		
 	</script>
 
 </body>
@@ -119,6 +124,9 @@
 </footer>
 
 <style>
+.currSign:before {
+    content: '$';
+}
 p {
 	text-indent: 40px;
 }

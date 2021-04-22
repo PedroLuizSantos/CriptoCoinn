@@ -53,7 +53,7 @@
 
 			<div class="column">
 				<div id="atributos" class="card">
-					<h4>Valor(usd):</h4>
+					<h4 >Valor(usd):</h4>
 					<h5>$${ada_price}</h5>
 				</div>
 			</div>
@@ -61,8 +61,10 @@
 			<div class="column">
 				<div id="atributos" class="card">
 					<h4>Market Cap:</h4>
-					
-					<h5 onkeypress="$(this).mask('00.000.000')">${ada_marketcap}</h5><div class="popup" onclick="myFunction()"> <i class="fa fa-info-circle" style="font-size: 20px"></i> <span class="popuptext" id="myPopup"> Market Cap permite que os investidores entendam o valor relativo de uma criptomoeda em relação às outras.</span>
+					<h5 class="myDIV">${ada_marketcap}</h5>
+					<div class="popup" onclick="myFunction()"> 
+					<i class="fa fa-info-circle" style="font-size: 20px"></i> 
+					<span class="popuptext" id="myPopup"> Market Cap permite que os investidores entendam o valor relativo de uma criptomoeda em relação às outras.</span>
 					</div>
 						
 				</div>
@@ -70,7 +72,7 @@
 			<div class="column">
 				<div id="atributos" class="card">
 					<h3>Total Volume:</h3>
-					<h5>${ada_volume}</h5>
+					<h5 class="myDIV">${ada_volume}</h5>
 				</div>
 			</div>
 		</div>
@@ -98,13 +100,23 @@
 	</div>
 	<br>
 	<script>
+	
 		// When the user clicks on div, open the popup
 		function myFunction() {
 			var popup = document.getElementById("myPopup");
 			popup.classList.toggle("show");
 		}
-	</script>
-
+		
+		let x = document.querySelectorAll(".myDIV");
+        for (let i = 0, len = x.length; i < len; i++) {
+            let num = Number(x[i].innerHTML).toLocaleString('en');
+            x[i].innerHTML = num;
+            x[i].classList.add("currSign");
+        }
+		
+         
+      </script>
+		
 </body>
 <br>
 <footer>
@@ -113,7 +125,15 @@
 	</div>
 </footer>
 
+
+
 <style>
+
+.currSign:before {
+            content: '$';
+        }
+
+
 p {
 	text-indent: 40px;
 }
