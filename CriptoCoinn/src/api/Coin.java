@@ -1,6 +1,8 @@
 package api;
 
 import java.math.BigInteger;
+import java.util.List;
+
 
 public class Coin {
     String name;
@@ -30,7 +32,19 @@ public class Coin {
     	
     }
     
+
+    
+    class market_values{
+    	List<double[]> prices;
+    	List<double[]> market_caps;
+    	List<double[]> total_volumes;
+    }
+    
     market_data market_data = new market_data();
+    
+    market_values daily_values 	= new market_values(); 
+    market_values weekly_values = new market_values(); 
+    market_values monthly_values = new market_values(); 
     
     public void ConverterMarket_Data(){
     	
