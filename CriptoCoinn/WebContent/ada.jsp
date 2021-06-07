@@ -71,10 +71,11 @@
 			</div>
 			<div class="column">
 				<div id="atributos" class="card">
-					<h3>Total Volume:</h3>
+					<h3>Volume Total:</h3>
 					<h5 class="myDIV">${ada_volume}</h5>
 				</div>
 			</div>
+			
 		</div>
 		<br>
 		<h3>Introdução</h3>
@@ -148,7 +149,8 @@ p {
 }
 
 .bg {
-	background-image: url("Fundo.png")
+	background-image: url("Fundo.png");
+	background-color: #778899;
 }
 /* Popup container - can be anything you want */
 .popup {
@@ -259,6 +261,7 @@ div.sticky {
 }
 
 .card {
+
 	background-color: #696969;
 	color: gold;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

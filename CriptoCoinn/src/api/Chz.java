@@ -36,7 +36,7 @@ public class Chz extends HttpServlet {
  	   	request.setAttribute("chz_marketcap", MyServletContextListener.Chiliz.market_data.market_cap.usd);
  	   	request.setAttribute("chz_volume", MyServletContextListener.Chiliz.market_data.total_volume.usd);
  	   	
- 	   	System.out.print("Estou aqui");
+ 	   	System.out.print("Carregando CHZ/");
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("chz.jsp");
         requestDispatcher.forward(request, response);
 	}

@@ -67,7 +67,8 @@ div.sticky {
 	font-size: 20px;
 }
 .bg {
-	background-image: url("Fundo.png")
+	background-image: url("Fundo.png");
+	background-color: #778899;
 }
 
 p {

@@ -126,7 +126,8 @@ p {
 }
 
 .bg {
-	background-image: url("Fundo.png")
+	background-image: url("Fundo.png");
+	background-color: #778899;
 }
 /* Popup container - can be anything you want */
 .popup {
