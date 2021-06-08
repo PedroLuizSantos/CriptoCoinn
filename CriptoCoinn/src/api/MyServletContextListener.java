@@ -17,10 +17,10 @@ public class MyServletContextListener implements ServletContextListener {
 	static Coin Chiliz = new Coin();
 	static Coin Polkadot = new Coin();
 	static Coin Solana = new Coin();
-	//Thread ada = new Thread(new ClasseRunnable());
 	
 
-	// public void contextInitialized(ServletContextEvent e) {
+	//public void contextInitialized(ServletContextEvent e) {
+		
 	public class ThreadAPI extends Thread {
 		
 		coinGecko coinGecko = new coinGecko();
@@ -37,23 +37,26 @@ public class MyServletContextListener implements ServletContextListener {
 			
 			try {
 				
-				moeda = gson.fromJson(coinGecko.bitcoinInfo(), Coin.class);
-				moeda.ConverterMarket_Data();
-				moeda.transferirMarket_Data();
-
-				Cardano = gson.fromJson(coinGecko.cardanoInfo(), Coin.class);
-				Cardano.ConverterMarket_Data();
-				Cardano.transferirMarket_Data();
+				Thread ThreadADA = new ThreadADA(Cardano) ;
+				ThreadADA.start();
 				
-				// Cardano.daily_values =
-				// gson.fromJson(coinGecko.cardanoMarketValues(timeFromDaily, timeTo),
-				// Coin.market_values.class);
-				// Cardano.weekly_values =
-				// gson.fromJson(coinGecko.cardanoMarketValues(timeFromWeekly, timeTo),
-				// Coin.market_values.class);
-				// Cardano.monthly_values =
-				// gson.fromJson(coinGecko.cardanoMarketValues(timeFromMonthly, timeTo),
-				// Coin.market_values.class);
+//				moeda = gson.fromJson(coinGecko.bitcoinInfo(), Coin.class);
+//				moeda.ConverterMarket_Data();
+//				moeda.transferirMarket_Data();
+
+//				Cardano = gson.fromJson(coinGecko.cardanoInfo(), Coin.class);
+//				Cardano.ConverterMarket_Data();
+//				Cardano.transferirMarket_Data();
+				
+				 Cardano.daily_values =
+				 gson.fromJson(coinGecko.cardanoMarketValues(timeFromDaily, timeTo),
+				 Coin.market_values.class);
+				 Cardano.weekly_values =
+				 gson.fromJson(coinGecko.cardanoMarketValues(timeFromWeekly, timeTo),
+				 Coin.market_values.class);
+				 Cardano.monthly_values =
+				 gson.fromJson(coinGecko.cardanoMarketValues(timeFromMonthly, timeTo),
+				 Coin.market_values.class);
 
 				/*
 				 * Mostrando Valores for(int i = 0; i < Cardano.daily_values.prices.size(); i =
@@ -69,21 +72,21 @@ public class MyServletContextListener implements ServletContextListener {
 				 * System.out.println(Cardano.monthly_values.prices.size());
 				 */
 
-				Binance = gson.fromJson(coinGecko.binanceInfo(), Coin.class);
-				Binance.ConverterMarket_Data();
-				Binance.transferirMarket_Data();
-
-				Chiliz = gson.fromJson(coinGecko.chilizInfo(), Coin.class);
-				Chiliz.ConverterMarket_Data();
-				Chiliz.transferirMarket_Data();
-
-				Polkadot = gson.fromJson(coinGecko.polkadotInfo(), Coin.class);
-				Polkadot.ConverterMarket_Data();
-				Polkadot.transferirMarket_Data();
-
-				Solana = gson.fromJson(coinGecko.solanaInfo(), Coin.class);
-				Solana.ConverterMarket_Data();
-				Solana.transferirMarket_Data();
+//				Binance = gson.fromJson(coinGecko.binanceInfo(), Coin.class);
+//				Binance.ConverterMarket_Data();
+//				Binance.transferirMarket_Data();
+//
+//				Chiliz = gson.fromJson(coinGecko.chilizInfo(), Coin.class);
+//				Chiliz.ConverterMarket_Data();
+//				Chiliz.transferirMarket_Data();
+//
+//				Polkadot = gson.fromJson(coinGecko.polkadotInfo(), Coin.class);
+//				Polkadot.ConverterMarket_Data();
+//				Polkadot.transferirMarket_Data();
+//
+//				Solana = gson.fromJson(coinGecko.solanaInfo(), Coin.class);
+//				Solana.ConverterMarket_Data();
+//				Solana.transferirMarket_Data();
 
 			} catch (JsonSyntaxException e1) {
 				e1.printStackTrace();
@@ -127,3 +130,4 @@ public class MyServletContextListener implements ServletContextListener {
 
 	}
 }
+
