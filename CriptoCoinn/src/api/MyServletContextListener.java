@@ -17,12 +17,12 @@ public class MyServletContextListener implements ServletContextListener {
 	static Coin Chiliz = new Coin();
 	static Coin Polkadot = new Coin();
 	static Coin Solana = new Coin();
+	//Thread ada = new Thread(new ClasseRunnable());
+	
 
 	// public void contextInitialized(ServletContextEvent e) {
 	public class ThreadAPI extends Thread {
-
-		Coin Cardano = new Coin();
-
+		
 		coinGecko coinGecko = new coinGecko();
 		Gson gson = new GsonBuilder().serializeNulls().create();
 		Coin moeda = new Coin();
@@ -32,36 +32,28 @@ public class MyServletContextListener implements ServletContextListener {
 		long timeFromWeekly = timeTo - 604800;
 		long timeFromMonthly = timeTo - 2592000;
 
-		Thread ada = new Thread(new ClasseRunnable());
-
-		public ThreadAPI() {
-			
-			Thread ada = new Thread(new ClasseRunnable());
-			ada.start();
-
-		}
 
 		public void run() {
-
-			// Thread bnb = new Thread();
-			// bnb.start();
-
-
+			
 			try {
-
+				
 				moeda = gson.fromJson(coinGecko.bitcoinInfo(), Coin.class);
 				moeda.ConverterMarket_Data();
 				moeda.transferirMarket_Data();
 
-				//Cardano = gson.fromJson(coinGecko.cardanoInfo(), Coin.class);
-				//Cardano.ConverterMarket_Data();
-				//Cardano.transferirMarket_Data();
-				//Cardano.daily_values = gson.fromJson(coinGecko.cardanoMarketValues(timeFromDaily, timeTo),
-						//Coin.market_values.class);
-				//Cardano.weekly_values = gson.fromJson(coinGecko.cardanoMarketValues(timeFromWeekly, timeTo),
-					//	Coin.market_values.class);
-				//Cardano.monthly_values = gson.fromJson(coinGecko.cardanoMarketValues(timeFromMonthly, timeTo),
-					//	Coin.market_values.class);
+				Cardano = gson.fromJson(coinGecko.cardanoInfo(), Coin.class);
+				Cardano.ConverterMarket_Data();
+				Cardano.transferirMarket_Data();
+				
+				// Cardano.daily_values =
+				// gson.fromJson(coinGecko.cardanoMarketValues(timeFromDaily, timeTo),
+				// Coin.market_values.class);
+				// Cardano.weekly_values =
+				// gson.fromJson(coinGecko.cardanoMarketValues(timeFromWeekly, timeTo),
+				// Coin.market_values.class);
+				// Cardano.monthly_values =
+				// gson.fromJson(coinGecko.cardanoMarketValues(timeFromMonthly, timeTo),
+				// Coin.market_values.class);
 
 				/*
 				 * Mostrando Valores for(int i = 0; i < Cardano.daily_values.prices.size(); i =
@@ -120,7 +112,7 @@ public class MyServletContextListener implements ServletContextListener {
 			}
 
 		}
-
+		
 		public double calcularVariacao(double valorInicial, double valorFinal) {
 			double variacao = 0;
 
