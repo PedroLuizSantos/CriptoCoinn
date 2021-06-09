@@ -21,6 +21,8 @@ public class ThreadADA extends Thread {
 	
 		try {
 			
+			
+
 			moeda = gson.fromJson(coinGecko.bitcoinInfo(), Coin.class);
 			moeda.ConverterMarket_Data();
 			moeda.transferirMarket_Data();
