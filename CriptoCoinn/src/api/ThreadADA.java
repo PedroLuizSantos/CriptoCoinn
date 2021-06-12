@@ -5,38 +5,35 @@ import com.google.gson.GsonBuilder;
 
 public class ThreadADA extends Thread {
 
-	public Coin Cardano;
+	private Coin Cardano;
 
 	public ThreadADA(Coin Cardano) {
-		
+
 		this.Cardano = Cardano;
 	}
 
 	@Override
 	public void run() {
 
-		coinGecko coinGecko = new coinGecko();
-		Gson gson = new GsonBuilder().serializeNulls().create();
-		Coin moeda = new Coin();
-	
-		try {
-			
-			
+			coinGecko coinGecko = new coinGecko();
+			Gson gson = new GsonBuilder().serializeNulls().create();
+			Coin moeda = new Coin();
 
-			moeda = gson.fromJson(coinGecko.bitcoinInfo(), Coin.class);
-			moeda.ConverterMarket_Data();
-			moeda.transferirMarket_Data();
+			try {
 
-			Cardano = gson.fromJson(coinGecko.cardanoInfo(), Coin.class);
-			Cardano.ConverterMarket_Data();
-			Cardano.transferirMarket_Data();
+				moeda = gson.fromJson(coinGecko.bitcoinInfo(), Coin.class);
+				moeda.ConverterMarket_Data();
+				moeda.transferirMarket_Data();
 
-			System.out.println("MOEDA ADA OK!" + Cardano);
-			
-		} catch (Exception e) {
+				Cardano = gson.fromJson(coinGecko.cardanoInfo(), Coin.class);
+				Cardano.ConverterMarket_Data();
+				Cardano.transferirMarket_Data();
 
-			e.printStackTrace();
+				System.out.println("THREAD ADA OK!" + Cardano);
+
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
 		}
 	}
-
-}
