@@ -36,7 +36,7 @@ public class Sol extends HttpServlet {
  	   	request.setAttribute("sol_marketcap", MyServletContextListener. Solana.market_data.market_cap.usd);
  	   	request.setAttribute("sol_volume", MyServletContextListener. Solana.market_data.total_volume.usd);
  	   	
- 	   	System.out.print("Carrregando SOL/");
+ 	   	//System.out.print("Carrregando SOL/");
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("sol.jsp");
         requestDispatcher.forward(request, response);
 	}

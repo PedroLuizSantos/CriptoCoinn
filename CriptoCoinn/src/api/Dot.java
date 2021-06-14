@@ -36,7 +36,7 @@ public class Dot extends HttpServlet {
  	   	request.setAttribute("dot_marketcap", MyServletContextListener.Polkadot.market_data.market_cap.usd);
  	   	request.setAttribute("dot_volume", MyServletContextListener.Polkadot.market_data.total_volume.usd);
  	   	
- 	   	System.out.print("Carregando DOT/");
+ 	   	//System.out.print("Carregando DOT/");
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("dot.jsp");
         requestDispatcher.forward(request, response);
 	}

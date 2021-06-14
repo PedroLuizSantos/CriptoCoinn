@@ -34,7 +34,7 @@ public class Ada extends HttpServlet {
 		request.setAttribute("ada_variacaoDiaria", MyServletContextListener.Cardano.daily_values.prices);
 
 		
-		System.out.print("Carregando ADA/");
+		//System.out.print("Carregando ADA/");
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("ada.jsp");
 		requestDispatcher.forward(request, response);
 	}

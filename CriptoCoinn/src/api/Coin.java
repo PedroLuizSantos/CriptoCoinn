@@ -58,6 +58,8 @@ public class Coin {
     	this.market_cap_usd = this.market_data.market_cap.marketcap;
     	this.total_volume_usd = this.market_data.total_volume.totalvolume;
     }
+
+    
     
     
 }

@@ -28,38 +28,32 @@ public class MyServletContextListener implements ServletContextListener {
 		long timeFromMonthly = timeTo - 2592000;
 
 		try {
-
+			
 			Thread threadADA = new ThreadADA(Cardano);
 			threadADA.start();
 
 			Thread threadBNB = new ThreadBNB(Binance);
 			threadBNB.start();
-
+			
 			moeda = gson.fromJson(coinGecko.bitcoinInfo(), Coin.class);
 			moeda.ConverterMarket_Data();
 			moeda.transferirMarket_Data();
 
+			Cardano = gson.fromJson(coinGecko.cardanoInfo(), Coin.class);
+			Cardano.ConverterMarket_Data();
+			Cardano.transferirMarket_Data();
+			
 			Cardano.daily_values = gson.fromJson(coinGecko.cardanoMarketValues(timeFromDaily, timeTo),
 					Coin.market_values.class);
 			Cardano.weekly_values = gson.fromJson(coinGecko.cardanoMarketValues(timeFromWeekly, timeTo),
 					Coin.market_values.class);
 			Cardano.monthly_values = gson.fromJson(coinGecko.cardanoMarketValues(timeFromMonthly, timeTo),
 					Coin.market_values.class);
-
-			/*
-			 * Mostrando Valores for(int i = 0; i < Cardano.daily_values.prices.size(); i =
-			 * i + 72) { System.out.println(Cardano.daily_values.prices.get(i)[1]); }
-			 * System.out.println(Cardano.daily_values.prices.size());
-			 * 
-			 * for(int i = 0; i < Cardano.weekly_values.prices.size(); i = i + 24) {
-			 * System.out.println(Cardano.weekly_values.prices.get(i)[1]); }
-			 * System.out.println(Cardano.weekly_values.prices.size());
-			 * 
-			 * for(int i = 0; i < Cardano.monthly_values.prices.size(); i = i + 24) {
-			 * System.out.println(Cardano.monthly_values.prices.get(i)[1]); }
-			 * System.out.println(Cardano.monthly_values.prices.size());
-			 */
-
+			
+			Binance = gson.fromJson(coinGecko.binanceInfo(), Coin.class);
+			Binance.ConverterMarket_Data();
+			Binance.transferirMarket_Data();
+		
 			Chiliz = gson.fromJson(coinGecko.chilizInfo(), Coin.class);
 			Chiliz.ConverterMarket_Data();
 			Chiliz.transferirMarket_Data();
@@ -75,7 +69,7 @@ public class MyServletContextListener implements ServletContextListener {
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		}
-
+		
 		// Calcular variação
 		double variacaoDiaria = 0;
 		double variacaoSemanal = 0;
@@ -95,17 +89,7 @@ public class MyServletContextListener implements ServletContextListener {
 			System.out.println(variacaoSemanal);
 			System.out.println(variacaoMensal);
 		}
-
-	}
-
-	public void dormir(int milisegundos) {
-		try {
-			System.out.println(Thread.currentThread().getName() + " irá dormir por " + milisegundos + " milesegundos.");
-			Thread.sleep(milisegundos);
-		} catch (Exception e) {
-
 		}
-	}
 
 	public double calcularVariacao(double valorInicial, double valorFinal) {
 		double variacao = 0;
