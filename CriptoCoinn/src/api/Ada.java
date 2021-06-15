@@ -31,8 +31,11 @@ public class Ada extends HttpServlet {
 		request.setAttribute("ada_price", MyServletContextListener.Cardano.market_data.current_price.usd);
 		request.setAttribute("ada_marketcap", MyServletContextListener.Cardano.market_data.market_cap.usd);
 		request.setAttribute("ada_volume", MyServletContextListener.Cardano.market_data.total_volume.usd);
-		request.setAttribute("ada_variacaoDiaria", MyServletContextListener.Cardano.daily_values.prices);
+		request.setAttribute("ada_variacaoDiaria_porcentagem", MyServletContextListener.Cardano.variacaoDiariaPorcentagem);
+		request.setAttribute("ada_variacaoMensal_porcentagem", MyServletContextListener.Cardano.variacaoMensalPorcentagem);
+		request.setAttribute("ada_analise", MyServletContextListener.Cardano.analise);
 
+		
 		
 		//System.out.print("Carregando ADA/");
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("ada.jsp");

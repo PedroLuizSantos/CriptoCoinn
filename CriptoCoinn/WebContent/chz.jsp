@@ -75,6 +75,28 @@
 					<h5 class="myDIV">${chz_volume}</h5>
 				</div>
 			</div>
+			
+			<div class="column">
+				<div id="atributos" class="card">
+					<h3>Var. diária:</h3>
+					<h5>${chz_variacaoDiaria_porcentagem}%</h5>
+				</div>
+			</div>
+			
+			<div class="column">
+				<div id="atributos" class="card">
+					<h3>Var. mensal:</h3>
+					<h5>${chz_variacaoMensal_porcentagem}%</h5>
+				</div>
+			</div>
+			
+			<div class="column">
+				<div id="atributos" class="card">
+					<h3>Análise:</h3>
+					<h5>${chz_analise}</h5>
+				</div>
+			</div>
+			
 		</div>
 		
 		<br>

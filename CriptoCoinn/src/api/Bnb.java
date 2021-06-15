@@ -36,6 +36,10 @@ public class Bnb extends HttpServlet {
  	   	request.setAttribute("bnb_marketcap", MyServletContextListener.Binance.market_data.market_cap.usd);
  	   	request.setAttribute("bnb_volume", MyServletContextListener.Binance.market_data.total_volume.usd);
  	   	
+ 	   	request.setAttribute("bnb_variacaoDiaria_porcentagem", MyServletContextListener.Binance.variacaoDiariaPorcentagem);
+		request.setAttribute("bnb_variacaoMensal_porcentagem", MyServletContextListener.Binance.variacaoMensalPorcentagem);
+		request.setAttribute("bnb_analise", MyServletContextListener.Binance.analise);
+ 	   	
  	   	//System.out.print("CarregandoBNB/");
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("bnb.jsp");
         requestDispatcher.forward(request, response);

@@ -17,7 +17,9 @@ public class ThreadADA extends Thread {
 	@Override
 	public void run() {
 
+		
 		while (true) {
+			
 			coinGecko coinGecko = new coinGecko();
 			Gson gson = new GsonBuilder().serializeNulls().create();
 			Coin moeda = new Coin();
@@ -43,16 +45,45 @@ public class ThreadADA extends Thread {
 						Coin.market_values.class);
 				Cardano.monthly_values = gson.fromJson(coinGecko.cardanoMarketValues(timeFromMonthly, timeTo),
 						Coin.market_values.class);
+				
+				
+				Cardano.variacaoDiaria = calcularVariacao(Cardano.daily_values.prices.get(0)[1],
+						Cardano.daily_values.prices.get(Cardano.daily_values.prices.size() - 1)[1]);
+				Cardano.variacaoSemanal = calcularVariacao(Cardano.weekly_values.prices.get(0)[1],
+						Cardano.weekly_values.prices.get(Cardano.weekly_values.prices.size() - 1)[1]);
+				Cardano.variacaoMensal = calcularVariacao(Cardano.monthly_values.prices.get(0)[1],
+						Cardano.monthly_values.prices.get(Cardano.monthly_values.prices.size() - 1)[1]);
 
-				ThreadADA.sleep(60000); //dormir por 1 minutos.
+				Cardano.variacaoDiariaPorcentagem = calcularVariacaoPorcentagem(Cardano.daily_values.prices.get(0)[1],
+						Cardano.daily_values.prices.get(Cardano.daily_values.prices.size() - 1)[1]);
+				Cardano.variacaoSemanalPorcentagem = calcularVariacaoPorcentagem(Cardano.weekly_values.prices.get(0)[1],
+						Cardano.weekly_values.prices.get(Cardano.weekly_values.prices.size() - 1)[1]);
+				Cardano.variacaoMensalPorcentagem = calcularVariacaoPorcentagem(Cardano.monthly_values.prices.get(0)[1],
+						Cardano.monthly_values.prices.get(Cardano.monthly_values.prices.size() - 1)[1]);
+				
+				if (Cardano.variacaoMensalPorcentagem <= -10 && Cardano.variacaoMensalPorcentagem >= -20
+						&& Cardano.variacaoDiariaPorcentagem < 10) {
+					Cardano.analise = "HORA DE COMPRAR/ANALISAR";
+				} else if (Cardano.variacaoMensalPorcentagem >= 5 && Cardano.variacaoMensalPorcentagem <= 10
+						&& Cardano.variacaoDiariaPorcentagem > 5) {
+					Cardano.analise = "HORA DE COMPRAR";
+				} else if (Cardano.variacaoMensalPorcentagem >= 30 && Cardano.variacaoDiariaPorcentagem <= -20) {
+					Cardano.analise = "HORA DE COMPRAR";
+				} else if (Cardano.variacaoMensalPorcentagem <= -10 && Cardano.variacaoMensalPorcentagem >= -20
+						&& Cardano.variacaoDiariaPorcentagem >= 20) {
+					Cardano.analise = "HORA DE ANALISAR";
+				} else if (Cardano.variacaoMensalPorcentagem <= -20 && Cardano.variacaoDiariaPorcentagem >= 50) {
+					Cardano.analise = "HORA DE COMPRAR";
+				} else if (Cardano.variacaoMensalPorcentagem >= 20 && Cardano.variacaoDiariaPorcentagem >= 50) {
+					Cardano.analise = "HORA DE VENDER/ANALISAR";
+				} else {
+					Cardano.analise = "HORA DE ANALISAR";
+				}
 
-				Cardano.current_price_usd = Cardano.current_price_usd;
-				Cardano.market_data.market_cap.usd = Cardano.market_data.market_cap.usd;
-				Cardano.market_data.total_volume.usd = Cardano.market_data.total_volume.usd;
-				Cardano.daily_values.prices = Cardano.daily_values.prices;
-				
-				
-				
+				System.out.println(Cardano.analise);
+
+				ThreadADA.sleep(40000); //dormir por 40 segundos.
+							
 				System.out.println("THREAD ADA OK!");
 
 				MyServletContextListener.Cardano = this.Cardano;
@@ -63,5 +94,18 @@ public class ThreadADA extends Thread {
 			}
 
 		}
+	}
+	public double calcularVariacao(double valorInicial, double valorFinal) {
+		double variacao = 0;
+
+		variacao = valorFinal - valorInicial;
+
+		return variacao;
+	}
+
+	public double calcularVariacaoPorcentagem(double valorInicial, double valorFinal) {
+		double variacao = 0;
+		variacao = ((valorFinal / valorInicial) * 100) - 100;
+		return variacao;
 	}
 }

@@ -74,6 +74,28 @@
 					<h5 class="myDIV">${sol_volume}</h5>
 				</div>
 			</div>
+			
+			<div class="column">
+				<div id="atributos" class="card">
+					<h3>Var. diária:</h3>
+					<h5>${sol_variacaoDiaria_porcentagem}%</h5>
+				</div>
+			</div>
+			
+			<div class="column">
+				<div id="atributos" class="card">
+					<h3>Var. mensal:</h3>
+					<h5>${sol_variacaoMensal_porcentagem}%</h5>
+				</div>
+			</div>
+			
+			<div class="column">
+				<div id="atributos" class="card">
+					<h3>Análise:</h3>
+					<h5>${sol_analise}</h5>
+				</div>
+			</div>
+				
 		</div>
 		<br>
 		<h3>Introdução</h3>

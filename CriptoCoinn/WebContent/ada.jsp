@@ -75,6 +75,24 @@
 					<h5 class="myDIV">${ada_volume}</h5>
 				</div>
 			</div>
+			<div class="column">
+				<div id="atributos" class="card">
+					<h3>Var. diária:</h3>
+					<h5>${ada_variacaoDiaria_porcentagem}%</h5>
+				</div>
+			</div>
+			<div class="column">
+				<div id="atributos" class="card">
+					<h3>Var. mensal:</h3>
+					<h5>${ada_variacaoMensal_porcentagem}%</h5>
+				</div>
+			</div>
+			<div class="column">
+				<div id="atributos" class="card">
+					<h3>Análise:</h3>
+					<h5>${ada_analise}</h5>
+				</div>
+			</div>
 			
 		</div>
 		<br>

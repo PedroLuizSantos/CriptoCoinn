@@ -5,9 +5,18 @@ import java.util.List;
 
 
 public class Coin {
-    String name;
-    String symbol;
-    
+	
+	String name;
+	String symbol;
+	String analise;
+	double variacaoDiaria = 0;
+	double variacaoSemanal = 0;
+	double variacaoMensal = 0;
+
+	double variacaoDiariaPorcentagem = 0;
+	double variacaoSemanalPorcentagem = 0;
+	double variacaoMensalPorcentagem = 0;
+	
     double current_price_usd;
     BigInteger market_cap_usd;
     BigInteger total_volume_usd;
